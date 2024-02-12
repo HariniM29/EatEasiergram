@@ -25,7 +25,12 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "npm-run-all --parallel start-server start-client",
+    "start-server": "nodemon server.js",
+    "start-client": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -53,3 +58,4 @@
     "webpack-cli": "^5.1.4"
   }
 }
+
